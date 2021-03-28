@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nehs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700,800,900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    
+    <div class="scene">
+        <div class="moon"></div>
+        <img src="forest.png" class="forest">
+    </div>
+    <script type="text/javascript">
+        function stars(){
+            let count = 500;
+            let scene = document.querySelector('.scene');
+            let i = 0;
+            while(i < count){
+                let star = document.createElement("i");
+                let x = Math.floor(Math.random() * window.innerWidth);
+                let y = Math.floor(Math.random() * window.innerHeight);
+                let duration = Math.random() * 10;
+                let size = Math.random() * 2;
+
+                star.style.left = x+'px';
+                star.style.top = y+'px';
+                star.style.width = 1+size+'px';
+                star.style.height = 1+size+'px';
+
+                star.style.animationDuration = 5+duration+'s';
+                star.style.animationDelay = duration+'s';
+
+
+                scene.appendChild(star);
+                i++
+            }
+        }
+        stars()
+    </script>
+
+    <div class="musicas"><audio controls autoplay>
+        <source src="fondo.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+          <div class="box">
+            <i class="texto">Bienvenido a la web de Nehs</i>
+              <img src="shen.png" class="logo">
+          </div>
+          
+        <div class="absolute">  
+            <ul>
+                <li><a href="https://www.instagram.com/nehsff/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCSHHxPlpfCT11Hw6g7BN91w"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.twitch.tv/nehsff"><i class="fa fa-twitch" aria-hidden="true"></i></a></li>
+                </ul> 
+            
+        </div>
+    
+</body>
+
+</html>

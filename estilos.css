@@ -1,0 +1,198 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.scene {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#111425,#3751e0);
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.moon{
+    position: relative;
+    top: 100px;
+    left: 400px;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.moon:after{
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(#111425,#3751e0);
+    background-attachment: fixed;
+}
+
+.forest{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transform: scale(1.2);
+}
+
+.scene i{
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: anima linear infinite;
+}
+
+.musicas{
+    position: absolute;
+    top: 0%;
+    width: 10px;
+    height: 50px;
+    left: 1%;
+}
+
+/*social redes*/
+
+ul{
+    top: 48%;
+    left: 30%;
+    position: absolute;
+    display: flex;
+
+}
+
+ul li {
+    
+    position: relative;
+    list-style: none;
+    margin: 0 20px;
+    cursor: pointer;
+
+}
+
+ul li a{
+    text-decoration: none;
+
+}
+
+ul li a .fa{
+   font-size: 6em;
+   color: #222;
+
+}
+
+ul li::before{
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    left:0;
+    font-size: 6em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+ul li:nth-child(1)::before
+{ 
+    pointer-events: none;
+    content: '\f16d';
+    color: #C13584;
+    border-bottom: 4px solid #C13584;
+}
+
+ul li:nth-child(2)::before
+{
+    pointer-events: none;
+    content: '\f16a';
+    color: #FF0000;
+    border-bottom: 4px solid #FF0000;
+}
+
+ul li:nth-child(3)::before
+{
+    pointer-events: none;
+    content: '\f1e8';
+    color: #6441a5;
+    border-bottom: 4px solid #6441a5;
+}
+
+ul li:hover::before{
+    height: 100%;
+}
+
+
+/* texto pagina web nehs*/
+
+.texto{
+    width: 800px;
+    height: 50px;
+    top: 40%;
+    left: 20%;
+    position: absolute;
+    font-size: 4em;
+    text-shadow: 0 0 50px #0f0,
+                 0 0 100px #0f0,
+                 0 0 150px #0f0,
+                 0 0 200px #0f0,
+                 0 0 250px #0f0;
+    animation: animate 5s linear infinite;
+    color: #fff;
+}
+
+/*logo-*/
+
+.logo{
+    width: 250px;
+    height: 250px;
+    top: 10%;
+    left: 35%;
+    position: absolute;
+    font-size: 5em;
+    text-shadow: 0 0 100px #0f0,
+                 0 0 150px #0f0,
+                 0 0 200px #0f0,
+                 0 0 250px #0f0,
+                 0 0 300px #0f0;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes anima
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10%,90%
+    {
+        opacity: 1;
+    
+    }
+    100%
+    {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
